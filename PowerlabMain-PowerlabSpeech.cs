@@ -50,7 +50,6 @@ namespace PowerlabMain
         private void btnSend_Click(object sender, EventArgs e)
         {
             SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
-            speechSynthesizer.SelectVoice("Microsoft Zira Desktop");
             Question = txtQuestionInput.Text;
             Answer = Choose(Question);
             txtAnswer.Text = "回答:" + Answer;
