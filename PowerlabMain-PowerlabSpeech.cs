@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
+using System.Globalization;
 
 namespace PowerlabMain
 {
@@ -50,9 +51,10 @@ namespace PowerlabMain
         private void btnSend_Click(object sender, EventArgs e)
         {
             SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
+            speechSynthesizer.SelectVoiceByHints(VoiceGender.Male, VoiceAge.Child, 0, new CultureInfo("zh-HANS"));
             Question = txtQuestionInput.Text;
             Answer = Choose(Question);
-            txtAnswer.Text = "回答:" + Answer;
+            txtAnswer.Text = speechSynthesizer.GetInstalledVoices().ToString();
             speechSynthesizer.Speak(Answer);
         }
     }

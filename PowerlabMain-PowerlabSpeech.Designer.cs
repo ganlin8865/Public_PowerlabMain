@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PowerlabMain_PowerlabSpeech));
             btnSend = new System.Windows.Forms.Button();
             picSmileTitle = new System.Windows.Forms.PictureBox();
             lblQuestionTitle = new System.Windows.Forms.Label();
@@ -44,9 +45,9 @@
             btnSend.BackgroundImage = Properties.Resources.a141;
             btnSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             btnSend.ForeColor = System.Drawing.Color.Transparent;
-            btnSend.Location = new System.Drawing.Point(677, 193);
+            btnSend.Location = new System.Drawing.Point(675, 193);
             btnSend.Name = "btnSend";
-            btnSend.Size = new System.Drawing.Size(48, 48);
+            btnSend.Size = new System.Drawing.Size(52, 52);
             btnSend.TabIndex = 0;
             btnSend.UseVisualStyleBackColor = true;
             btnSend.Click += btnSend_Click;
@@ -73,10 +74,10 @@
             // 
             // txtQuestionInput
             // 
-            txtQuestionInput.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 134);
-            txtQuestionInput.Location = new System.Drawing.Point(276, 193);
+            txtQuestionInput.Font = new System.Drawing.Font("途灵盈黑", 21.7499981F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            txtQuestionInput.Location = new System.Drawing.Point(274, 193);
             txtQuestionInput.Name = "txtQuestionInput";
-            txtQuestionInput.Size = new System.Drawing.Size(394, 46);
+            txtQuestionInput.Size = new System.Drawing.Size(394, 49);
             txtQuestionInput.TabIndex = 4;
             // 
             // btnLssues
@@ -103,7 +104,7 @@
             // 
             txtAnswer.AcceptsReturn = true;
             txtAnswer.Font = new System.Drawing.Font("途灵盈黑", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 128);
-            txtAnswer.Location = new System.Drawing.Point(159, 247);
+            txtAnswer.Location = new System.Drawing.Point(160, 251);
             txtAnswer.Multiline = true;
             txtAnswer.Name = "txtAnswer";
             txtAnswer.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -114,7 +115,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new System.Drawing.Font("途灵盈黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(331, 475);
+            label1.Location = new System.Drawing.Point(333, 475);
             label1.Name = "label1";
             label1.Size = new System.Drawing.Size(332, 23);
             label1.TabIndex = 8;
@@ -122,8 +123,9 @@
             // 
             // PowerlabMain_PowerlabSpeech
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            AutoScroll = true;
             ClientSize = new System.Drawing.Size(984, 561);
             Controls.Add(label1);
             Controls.Add(txtAnswer);
@@ -133,9 +135,11 @@
             Controls.Add(lblQuestionTitle);
             Controls.Add(picSmileTitle);
             Controls.Add(btnSend);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
             Margin = new System.Windows.Forms.Padding(2);
             Name = "PowerlabMain_PowerlabSpeech";
-            Text = "PowerlabSpeech语音助手";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "PowerSpeech语音助手";
             ((System.ComponentModel.ISupportInitialize)picSmileTitle).EndInit();
             ResumeLayout(false);
             PerformLayout();
