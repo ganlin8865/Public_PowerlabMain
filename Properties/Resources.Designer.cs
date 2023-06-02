@@ -63,6 +63,16 @@ namespace PowerlabMain.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap a141 {
+            get {
+                object obj = ResourceManager.GetObject("a141", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap emojimix_app_2_7 {
             get {
                 object obj = ResourceManager.GetObject("emojimix.app_2_7", resourceCulture);
