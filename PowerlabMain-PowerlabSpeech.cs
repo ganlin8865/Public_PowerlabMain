@@ -13,15 +13,48 @@ namespace PowerlabMain
 {
     public partial class PowerlabMain_PowerlabSpeech : Form
     {
+        string Question, Answer;
+
         public PowerlabMain_PowerlabSpeech()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public bool IsWho(string question)
+        {
+            if (question == "你是谁" ||
+                question == "你是谁？" ||
+                question == "你是谁?")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public string Choose(string question)
+        {
+            if (IsWho(question))
+            {
+                string WhoAnswer = "我是由Powerlab开发团队开发的名为\"PowerSpeech\"的语音助手1.0，\n目前处于内测阶段，\n无法进行语音识别功能。";
+                return WhoAnswer;
+            }
+            else
+            {
+                return question;
+            }
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
         {
             SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
-            speechSynthesizer.Speak("我逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼");
+            speechSynthesizer.SelectVoice("Microsoft Zira Desktop");
+            Question = txtQuestionInput.Text;
+            Answer = Choose(Question);
+            txtAnswer.Text = "回答:" + Answer;
+            speechSynthesizer.Speak(Answer);
         }
     }
 }
