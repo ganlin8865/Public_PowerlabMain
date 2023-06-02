@@ -21,7 +21,7 @@ namespace PowerlabMain
         private void button1_Click(object sender, EventArgs e)
         {
             SpeechSynthesizer speechSynthesizer = new SpeechSynthesizer();
-            speechSynthesizer.Speak("Hi!");
+            speechSynthesizer.Speak("我逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼逼");
         }
     }
 }
