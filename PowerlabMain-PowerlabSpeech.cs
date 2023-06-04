@@ -23,9 +23,9 @@ namespace PowerlabMain
 
         public bool IsWho(string question)
         {
-            if (question == "你是谁" ||
-                question == "你是谁？" ||
-                question == "你是谁?")
+            if (question.Contains("你是谁") == true ||
+                question.Contains("你是谁？") == true ||
+                question.Contains("你是谁?") == true)
             {
                 return true;
             }
@@ -39,7 +39,7 @@ namespace PowerlabMain
         {
             if (IsWho(question))
             {
-                string WhoAnswer = "我是由Powerlab开发团队开发的名为\"PowerSpeech\"的语音助手1.0，\n目前处于内测阶段，\n无法进行语音识别功能。";
+                string WhoAnswer = "用户你好！\n我是由Powerlab开发团队开发的名为\"PowerSpeech\"的语音助手1.0。\n我有什么能帮助你的吗？";
                 return WhoAnswer;
             }
             else
@@ -55,7 +55,7 @@ namespace PowerlabMain
             Question = txtQuestionInput.Text;
             Answer = Choose(Question);
             txtAnswer.Text = speechSynthesizer.GetInstalledVoices().ToString();
-            speechSynthesizer.Speak(Answer);
+            speechSynthesizer.SpeakAsync(Answer);
         }
     }
 }
