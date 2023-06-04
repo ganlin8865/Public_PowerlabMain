@@ -36,7 +36,6 @@
             btnLssues = new System.Windows.Forms.Button();
             lblNameTitleChn = new System.Windows.Forms.Label();
             txtAnswer = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)picSmileTitle).BeginInit();
             SuspendLayout();
             // 
@@ -45,7 +44,7 @@
             btnSend.BackgroundImage = Properties.Resources.a141;
             btnSend.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             btnSend.ForeColor = System.Drawing.Color.Transparent;
-            btnSend.Location = new System.Drawing.Point(675, 193);
+            btnSend.Location = new System.Drawing.Point(655, 193);
             btnSend.Name = "btnSend";
             btnSend.Size = new System.Drawing.Size(52, 52);
             btnSend.TabIndex = 0;
@@ -75,10 +74,11 @@
             // txtQuestionInput
             // 
             txtQuestionInput.Font = new System.Drawing.Font("途灵盈黑", 21.7499981F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            txtQuestionInput.Location = new System.Drawing.Point(274, 193);
+            txtQuestionInput.Location = new System.Drawing.Point(278, 196);
             txtQuestionInput.Name = "txtQuestionInput";
-            txtQuestionInput.Size = new System.Drawing.Size(394, 49);
+            txtQuestionInput.Size = new System.Drawing.Size(371, 49);
             txtQuestionInput.TabIndex = 4;
+            txtQuestionInput.TextChanged += txtQuestionInput_TextChanged;
             // 
             // btnLssues
             // 
@@ -111,22 +111,11 @@
             txtAnswer.Size = new System.Drawing.Size(676, 212);
             txtAnswer.TabIndex = 7;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("途灵盈黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            label1.Location = new System.Drawing.Point(333, 475);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(332, 23);
-            label1.TabIndex = 8;
-            label1.Text = "小提示:可以说”更改语音“来更改朗读的声音。";
-            // 
             // PowerlabMain_PowerlabSpeech
             // 
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             AutoScroll = true;
             ClientSize = new System.Drawing.Size(984, 561);
-            Controls.Add(label1);
             Controls.Add(txtAnswer);
             Controls.Add(lblNameTitleChn);
             Controls.Add(btnLssues);
@@ -153,6 +142,5 @@
         private System.Windows.Forms.Button btnLssues;
         private System.Windows.Forms.Label lblNameTitleChn;
         private System.Windows.Forms.TextBox txtAnswer;
-        private System.Windows.Forms.Label label1;
     }
 }

@@ -20,7 +20,11 @@ namespace PowerlabMain
         private void btnLogin_Click(object sender, EventArgs e)
         {
             PowerlabMain_PowerlabSpeech powerlabMain_PowerlabSpeech = new PowerlabMain_PowerlabSpeech();
-            powerlabMain_PowerlabSpeech.Show();
+            string UserName = txtInput.Text;
+            if (UserName == "Boss")
+            {
+                powerlabMain_PowerlabSpeech.Show();
+            }
         }
     }
 }

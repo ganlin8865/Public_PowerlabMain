@@ -76,6 +76,7 @@
             // 
             // PowerlabMain_PowerlabLogin
             // 
+            AcceptButton = btnLogin;
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             ClientSize = new System.Drawing.Size(984, 561);
             Controls.Add(btnLogin);

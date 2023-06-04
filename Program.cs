@@ -16,7 +16,7 @@ namespace PowerlabMain
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PowerlabMain_PowerlabSpeech());
+            Application.Run(new PowerlabMain_PowerlabLogin());
         }
     }
 }
