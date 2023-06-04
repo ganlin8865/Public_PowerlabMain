@@ -80,6 +80,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PowerlabMain-PowerlabLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PowerlabMain-PowerlabLogin.Designer.cs">
+      <DependentUpon>PowerlabMain-PowerlabLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="PowerlabMain-PowerlabSpeech.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PowerlabMain-PowerlabLogin.resx">
+      <DependentUpon>PowerlabMain-PowerlabLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PowerlabMain-PowerlabSpeech.resx">
       <DependentUpon>PowerlabMain-PowerlabSpeech.cs</DependentUpon>
     </EmbeddedResource>

@@ -39,7 +39,7 @@ namespace PowerlabMain
         {
             if (IsWho(question))
             {
-                string WhoAnswer = "用户你好！\n我是由Powerlab开发团队开发的名为\"PowerSpeech\"的语音助手1.0。\n我有什么能帮助你的吗？";
+                string WhoAnswer = "您好！\n我是由Powerlab开发团队开发的名为\"PowerSpeech\"的语音助手1.0。\n我有什么能帮助你的吗？";
                 return WhoAnswer;
             }
             else
@@ -54,7 +54,7 @@ namespace PowerlabMain
             speechSynthesizer.SelectVoiceByHints(VoiceGender.Male, VoiceAge.Child, 0, new CultureInfo("zh-HANS"));
             Question = txtQuestionInput.Text;
             Answer = Choose(Question);
-            txtAnswer.Text = speechSynthesizer.GetInstalledVoices().ToString();
+            txtAnswer.Text = Answer;
             speechSynthesizer.SpeakAsync(Answer);
         }
     }
