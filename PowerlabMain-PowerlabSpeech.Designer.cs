@@ -123,8 +123,7 @@
             // 
             // PowerlabMain_PowerlabSpeech
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             AutoScroll = true;
             ClientSize = new System.Drawing.Size(984, 561);
             Controls.Add(label1);
